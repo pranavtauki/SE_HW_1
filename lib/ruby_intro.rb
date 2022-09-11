@@ -74,5 +74,23 @@ end
 
 # Object representing a book
 class BookInStock
-  # YOUR CODE HERE
+    def initialize(isbn,price)
+    	if isbn.length()>0
+    		@isbn = isbn
+    	else
+    		raise ArgumentError
+    	end
+    	if price>0
+    		@price = price
+    	else
+    		raise ArgumentError
+    	end
+    end
+    def price_as_string()
+    	return "$" + "%.2f" %price
+    end
+
+    attr_accessor :isbn
+    attr_accessor :price
+
 end
