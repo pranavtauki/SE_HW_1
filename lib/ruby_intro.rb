@@ -44,20 +44,30 @@ def sum_to_n?(arr, number)
   return false
 end
 
-#sum_to_n? [-1,-2,3,4,5,-8],12
-=begin
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  a = "Hello, "
+  a + name
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  if /^[^aeiou\W]/i.match(string) == nil
+  	return false
+  else 
+  	return true
+  end
+
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+str = string.to_i()
+if /\b[01]+\b/.match(string) != nil
+	if str%4 == 0
+		return true
+	end
+end
+return false
 end
 
 # Part 3
@@ -66,4 +76,3 @@ end
 class BookInStock
   # YOUR CODE HERE
 end
-=end
